@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes Recomendados Love</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .video-container {
+            max-width: 560px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        .video-container h3 {
+            margin-top: 0;
+        }
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Animes Recomendados Love</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="openTab('lista-animes')">Lista de Animes</a></li>
+                <li><a href="#" onclick="openTab('trailers')">Trailers</a></li>
+                <li><a href="#" onclick="openTab('links-recomendados')">Sites</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lista-animes" class="active">
+            <h2>Lista de Animes</h2>
+            <ul>
+                <li>Leadale no Daichi nite <span class="status">❌</span></li>
+                <li>Overlord <span class="status">✔️</span></li>
+                <li>Quan Zhi Gao Shou (The King's Avatar) <span class="status">❌❓</span></li>
+            </ul>
+        </section>
+
+        <section id="trailers">
+            <h2>Trailers</h2>
+            <div class="video-container">
+                <h3>Leadale no Daichi nite</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/J9awZtCDOPQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <h3>Overlord</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RuNAPPcjDr4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <h3>The King's Avatar</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ef7GCI4Cdxg" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="links-recomendados">
+            <h2>Sites Recomendados</h2>
+            <ul>
+                <li><a href="https://www.animestc.net/animes/leadale-no-daichi-nite">Leadale no Daichi nite</a></li>
+                <li><a href="https://www.animestc.net/animes/overlord-anime">Overlord</a></li>
+                <li><a href="https://anidong.net/anime/the-kings-avatar-1a-temporada/">The King's Avatar</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Edu.</p>
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            var i, sections;
+            sections = document.getElementsByTagName("section");
+            for (i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+        }
+    </script>
+</body>
+</html>
